@@ -8,7 +8,7 @@ Project belajar kerja tim menggunakan GitHub dan CodeIgniter 4.
 
 ### 1. Connect Database Laragon dan Konfigurasi CI4
 
-Status: `Open`
+Status: `Done`
 
 Kerjakan setup database lokal menggunakan Laragon MySQL, lalu konfigurasi CodeIgniter 4 supaya aplikasi bisa membaca database dari file `.env`.
 

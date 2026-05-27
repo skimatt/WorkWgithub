@@ -107,7 +107,7 @@ good-first-issue
 
 Tanggal eksekusi: `2026-05-27 17:42:47 +07:00`
 
-Status: `In Progress (hampir selesai)`
+Status: `Done`
 
 Sudah dikerjakan:
 
@@ -128,8 +128,12 @@ Sudah dikerjakan:
 - `php spark db:table` berhasil konek ke DB (output: `Database has no tables!`).
 - `php spark migrate:status` berjalan (output: `No migrations were found.`).
 
-Perlu dilanjutkan oleh eksekutor saat implementasi fitur database:
+Validasi runtime:
+
+- `php spark serve --host 127.0.0.1 --port 8080` berhasil dijalankan.
+- Endpoint `http://127.0.0.1:8080` merespons `HTTP 200` saat pengujian.
+
+Next backlog (di luar scope Issue 1):
 
 - Tambahkan migration schema project, lalu jalankan migrate.
-- Jalankan `php spark serve` manual di terminal lokal tanpa timeout untuk verifikasi runtime penuh.
 
