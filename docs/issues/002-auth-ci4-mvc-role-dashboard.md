@@ -78,3 +78,26 @@ Menyediakan fondasi autentikasi yang aman dan konsisten agar flow aplikasi berik
 - Commit + push ke branch utama.
 - Issue diupdate dengan ringkasan command verifikasi.
 
+## Update Eksekusi
+
+Tanggal eksekusi: `2026-05-27`
+
+Status: `Done`
+
+Ringkasan hasil:
+
+- Auth MVC sudah dibuat (`Auth` controller, `UserModel`, view login).
+- Filter akses sudah dibuat (`auth`, `guest`, `role`) dan dipasang di route.
+- Dashboard per role sudah dibuat:
+  - `/admin/dashboard`
+  - `/peserta/dashboard`
+- Seeder user demo sudah dibuat dan dijalankan:
+  - `admin@example.com / password123` (role `admin`)
+  - `peserta@example.com / password123` (role `peserta`)
+- Verifikasi route dengan `php spark routes` sudah sesuai.
+- Verifikasi flow HTTP:
+  - Guest akses dashboard -> redirect ke login.
+  - Login admin -> redirect ke dashboard admin.
+  - Login peserta -> redirect ke dashboard peserta.
+  - Admin ke dashboard peserta -> ditolak (redirect login).
+  - Peserta ke dashboard admin -> ditolak (redirect login).
