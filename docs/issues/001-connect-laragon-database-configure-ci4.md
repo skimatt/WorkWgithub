@@ -103,3 +103,33 @@ laragon
 good-first-issue
 ```
 
+## Update Eksekusi
+
+Tanggal eksekusi: `2026-05-27 17:42:47 +07:00`
+
+Status: `In Progress (hampir selesai)`
+
+Sudah dikerjakan:
+
+- File `.env` sudah dibuat dari file `env`.
+- `CI_ENVIRONMENT` sudah diset ke `development`.
+- `app.baseURL` sudah diset ke `http://localhost:8080/`.
+- Konfigurasi `database.default.*` sudah diset ke:
+  - hostname: `localhost`
+  - database: `myapp_ci4`
+  - username: `root`
+  - password: `(kosong)`
+  - driver: `MySQLi`
+  - port: `3306`
+- Port MySQL `localhost:3306` terdeteksi aktif (`TcpTestSucceeded=True`).
+- `php spark config:check App` berhasil.
+- `php spark config:check Database` berhasil.
+- `php spark db:create myapp_ci4` mengembalikan pesan database sudah ada.
+- `php spark db:table` berhasil konek ke DB (output: `Database has no tables!`).
+- `php spark migrate:status` berjalan (output: `No migrations were found.`).
+
+Perlu dilanjutkan oleh eksekutor saat implementasi fitur database:
+
+- Tambahkan migration schema project, lalu jalankan migrate.
+- Jalankan `php spark serve` manual di terminal lokal tanpa timeout untuk verifikasi runtime penuh.
+
